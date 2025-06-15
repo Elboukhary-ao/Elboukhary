@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
 
+    <link rel="stylesheet" href="assets/css/main-banner-slider.css">
+
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
@@ -100,22 +102,28 @@ https://templatemo.com/tm-571-hexashop
 
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="left-content">
-                        <div class="thumb">
-                            <div class="inner-content">
-                                <h4>Bem-vindo à El Boukhary</h4>
-                                <span>Materiais de construção com qualidade e variedade</span>
-                                <div class="main-border-button">
-                                    <a href="#">Ver Produtos</a>
-                                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="left-content">
+                    <div class="thumb main-banner-slider">
+                        <div class="inner-content">
+                            <h4>Bem-vindo à El Boukhary</h4>
+                            <span>Materiais de construção com qualidade e variedade</span>
+                            <div class="main-border-button">
+                                <a href="#">Ver Produtos</a>
                             </div>
-                            <img src="assets/images/loja2.jpeg" alt="">
+                        </div>
+                        <div class="slider-images">
+                            <img src="assets/images/loja2.jpeg" alt="Banner 1" class="active">
+                            <img src="assets/images/left-banner-image1.jpg" alt="Banner 2">
+                            <img src="assets/images/left-banner-image2.jpg" alt="Banner 3">
+                            <img src="assets/images/left-banner-image3.jpg" alt="Banner 4">   
+                            <img src="assets/images/left-banner-image4.jpg" alt="Banner 5"> 
                         </div>
                     </div>
                 </div>
+            </div>
                 <div class="col-lg-6">
                     <div class="right-content">
                         <div class="row">
@@ -849,6 +857,18 @@ https://templatemo.com/tm-571-hexashop
 
     </script>
 
+      <script>
+  // Rotativo simples para main-banner esquerdo
+  document.addEventListener("DOMContentLoaded", function () {
+    const imgs = document.querySelectorAll('.main-banner-slider .slider-images img');
+    let idx = 0;
+    setInterval(() => {
+      imgs[idx].classList.remove('active');
+      idx = (idx + 1) % imgs.length;
+      imgs[idx].classList.add('active');
+    }, 3500);
+  });
+</script>
 
   </body>
 </html>
